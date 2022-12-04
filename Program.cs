@@ -92,3 +92,20 @@ namespace AesEncryption {
 
         }
 
+  // Encryption validation and print methods
+
+        private static string readPlaintext() {
+            Console.WriteLine("Please enter the text that you want to encrypt:");
+            string plainText = "";
+            bool isPlainTextValid = true;
+            while (isPlainTextValid) {
+                plainText = Console.ReadLine();
+                if (plainText.Length == 0) {
+                    Console.WriteLine("Invalid plaintext, it should not be empty");
+                } else {
+                    isPlainTextValid = false;
+                }
+            }
+            Console.WriteLine("--------------------------------------------------------------");
+            return plainText;
+        }
